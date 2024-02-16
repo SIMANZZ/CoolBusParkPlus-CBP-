@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CBP.Buses">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEIAAAAgCAggBAAIECQACACAABAQSAEAQgIBIBCAFA=</HashCode>
+      <FileName>Buses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.ChangeData">
+    <Position X="11" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAgAABACAgwBAlAEiAAAYCAAgAACAoQAAABAJQABA=</HashCode>
+      <FileName>ChangeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.Chart">
+    <Position X="8" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAASAAAACAAAAAAAEAAAAIAAAABA=</HashCode>
+      <FileName>Chart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.Cost">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAGAgAAAAABCAgAACAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Cost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.Drivers">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAAAAAACAggBBCAEGgAAACABAAACAggAAABIAAABA=</HashCode>
+      <FileName>Drivers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.Form1">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAABACAIACEAAACACACCQAAECARAIEQACAAAAAE=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.HelpForm">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAACAgABAAAACACAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HelpForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.Login">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgADBACAghBBEDADQABACCIgAEAQEEAAIBARAARA=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.MainForm">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RxQQAgCEBGlhkBBAVVyAlQkCAnBkAiSIAMgAEYBQThI=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.Program">
+    <Position X="8" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.Register">
+    <Position X="12.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIgAABACAggFCBCEDAAAAiAAyAAQQAUABABABAARA=</HashCode>
+      <FileName>Register.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.Remove">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAgABAQAFCAABACAAQBAAAAEAAABAAAQBA=</HashCode>
+      <FileName>Remove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.Routes">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAoBSAoADAAAECAAAECAAAAhCABAAAABZAAABA=</HashCode>
+      <FileName>Routes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.SplashForm">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACAAABAAAACAAACCAAAAAAQEAAAAACBAAAA=</HashCode>
+      <FileName>SplashForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.Stations">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgABIACAgABAAAECAAAAKQIAAACAAAAAADIAAABE=</HashCode>
+      <FileName>Stations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBP.UserForm">
+    <Position X="9.5" Y="8.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="CBP.UserForm.BusesType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UserForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IAAIAABAKOIAgBAiAECAEGBDQDpAREwEABAoBABQSDo=</HashCode>
+      <FileName>UserForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

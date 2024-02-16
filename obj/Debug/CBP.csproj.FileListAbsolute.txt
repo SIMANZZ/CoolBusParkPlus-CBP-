@@ -1,0 +1,101 @@
+D:\Lessons\КПиЯП\Project\CBP\bin\Debug\CBP.exe.config
+D:\Lessons\КПиЯП\Project\CBP\bin\Debug\CBP.exe
+D:\Lessons\КПиЯП\Project\CBP\bin\Debug\CBP.pdb
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.csproj.AssemblyReference.cache
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.csproj.SuggestedBindingRedirects.cache
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.Form1.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.Properties.Resources.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.csproj.GenerateResource.cache
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.csproj.CoreCompileInputs.cache
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.exe
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.pdb
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.SplashForm.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.Login.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.MainForm.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.Register.resources
+D:\Lessons\КПиЯП\Project\CBP\bin\Debug\EntityFramework.dll
+D:\Lessons\КПиЯП\Project\CBP\bin\Debug\EntityFramework.SqlServer.dll
+D:\Lessons\КПиЯП\Project\CBP\bin\Debug\System.Data.SQLite.dll
+D:\Lessons\КПиЯП\Project\CBP\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Lessons\КПиЯП\Project\CBP\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Lessons\КПиЯП\Project\CBP\bin\Debug\EntityFramework.xml
+D:\Lessons\КПиЯП\Project\CBP\bin\Debug\EntityFramework.SqlServer.xml
+D:\Lessons\КПиЯП\Project\CBP\bin\Debug\System.Data.SQLite.xml
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.csproj.CopyComplete
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.Routes.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.Buses.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.Remove.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.Drivers.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.Stations.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.UserForm.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.ChangeData.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.Cost.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.HelpForm.resources
+D:\Lessons\КПиЯП\Project\CBP\obj\Debug\CBP.Chart.resources
+D:\Important\Course Project\КП\PRG\bin\Debug\CBP.exe.config
+D:\Important\Course Project\КП\PRG\bin\Debug\CBP.exe
+D:\Important\Course Project\КП\PRG\bin\Debug\CBP.pdb
+D:\Important\Course Project\КП\PRG\bin\Debug\EntityFramework.dll
+D:\Important\Course Project\КП\PRG\bin\Debug\EntityFramework.SqlServer.dll
+D:\Important\Course Project\КП\PRG\bin\Debug\System.Data.SQLite.dll
+D:\Important\Course Project\КП\PRG\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Important\Course Project\КП\PRG\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Important\Course Project\КП\PRG\bin\Debug\EntityFramework.xml
+D:\Important\Course Project\КП\PRG\bin\Debug\EntityFramework.SqlServer.xml
+D:\Important\Course Project\КП\PRG\bin\Debug\System.Data.SQLite.xml
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.csproj.AssemblyReference.cache
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.Buses.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.ChangeData.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.Chart.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.Cost.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.Drivers.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.Form1.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.HelpForm.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.Login.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.MainForm.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.Properties.Resources.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.Register.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.Remove.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.Routes.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.SplashForm.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.Stations.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.UserForm.resources
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.csproj.GenerateResource.cache
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.csproj.CoreCompileInputs.cache
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.csproj.CopyComplete
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.exe
+D:\Important\Course Project\КП\PRG\obj\Debug\CBP.pdb
+D:\Lessons\CourseProject\bin\Debug\CBP.exe.config
+D:\Lessons\CourseProject\bin\Debug\CBP.exe
+D:\Lessons\CourseProject\bin\Debug\CBP.pdb
+D:\Lessons\CourseProject\bin\Debug\EntityFramework.dll
+D:\Lessons\CourseProject\bin\Debug\EntityFramework.SqlServer.dll
+D:\Lessons\CourseProject\bin\Debug\System.Data.SQLite.dll
+D:\Lessons\CourseProject\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Lessons\CourseProject\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Lessons\CourseProject\bin\Debug\EntityFramework.xml
+D:\Lessons\CourseProject\bin\Debug\EntityFramework.SqlServer.xml
+D:\Lessons\CourseProject\bin\Debug\System.Data.SQLite.xml
+D:\Lessons\CourseProject\obj\Debug\CBP.csproj.AssemblyReference.cache
+D:\Lessons\CourseProject\obj\Debug\CBP.Buses.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.ChangeData.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.Chart.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.Cost.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.Drivers.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.HelpForm.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.Login.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.MainForm.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.Properties.Resources.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.Register.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.Remove.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.Routes.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.SplashForm.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.Stations.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.UserForm.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.csproj.GenerateResource.cache
+D:\Lessons\CourseProject\obj\Debug\CBP.csproj.CoreCompileInputs.cache
+D:\Lessons\CourseProject\obj\Debug\CBP.csproj.CopyComplete
+D:\Lessons\CourseProject\obj\Debug\CBP.exe
+D:\Lessons\CourseProject\obj\Debug\CBP.pdb
+D:\Lessons\CourseProject\obj\Debug\CBP.Trips.resources
+D:\Lessons\CourseProject\obj\Debug\CBP.EnterForm.resources
