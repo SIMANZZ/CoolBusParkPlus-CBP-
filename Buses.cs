@@ -17,7 +17,7 @@ namespace CBP
 
         SQLiteConnection DB;
         SQLiteCommand CMD;
-        DataTable BusesTable;
+        DataTable BusesTable, ModelsTable;
         public Buses()
         {
             InitializeComponent();
@@ -37,6 +37,8 @@ namespace CBP
             DB.Open();
 
             BusesTable = new DataTable();
+
+            ModelsTable = new DataTable();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -49,7 +51,7 @@ namespace CBP
             DateTime dDate = Calendar.Value;
             int year = int.Parse(String.Format("{0:yyyy}", dDate));
             string pattern = @"[A-Z]{2}\s[0-9]{4}-[1-8]{1}";
-            if (BrandBox.Text == "марка" || ModelBox.Text == "модель" || IndividualNumberBox.Text == "индивидуальный номер" || LicensePlateBox.Text == "номерной знак" || MileageBox.Text == "пробег")
+            if (IndividualNumberBox.Text == "индивидуальный номер" || LicensePlateBox.Text == "номерной знак" || MileageBox.Text == "пробег")
             {
                 MessageBox.Show("Поля не могут быть пустыми");
             }
@@ -65,8 +67,6 @@ namespace CBP
                     if (Regex.IsMatch(LicensePlateBox.Text, pattern, RegexOptions.IgnoreCase))
                     {
                         CMD.CommandText = "INSERT INTO Buses (Марка,Модель,[Индивидуальный номер],[Номерной знак],[Дата поступления],Пробег) VALUES (@Brand, @Model, @IndividualNumber,@LicensePlate,@Date,@Mileage)";
-                        CMD.Parameters.AddWithValue("@Brand", BrandBox.Text);
-                        CMD.Parameters.AddWithValue("@Model", ModelBox.Text);
                         CMD.Parameters.AddWithValue("@IndividualNumber", IndividualNumberBox.Text);
                         CMD.Parameters.AddWithValue("@LicensePlate", LicensePlateBox.Text);
                         CMD.Parameters.AddWithValue("@Date", String.Format("{0:dd.MM.yyyy}", dDate));
@@ -85,43 +85,6 @@ namespace CBP
                 {
                     MessageBox.Show("Пробег должен быть числом");
                 }
-            }
-        }
-
-
-        private void BrandBox_Enter(object sender, EventArgs e)
-        {
-            if (BrandBox.Text == "марка")
-            {
-                BrandBox.Text = "";
-                BrandBox.ForeColor = Color.Black;
-            }
-        }
-
-        private void BrandBox_Leave(object sender, EventArgs e)
-        {
-            if (BrandBox.Text == "")
-            {   
-                BrandBox.Text = "марка";
-                BrandBox.ForeColor = Color.Silver;
-            }
-        }
-
-        private void ModelBox_Enter(object sender, EventArgs e)
-        {
-            if (ModelBox.Text == "модель")
-            {
-                ModelBox.Text = "";
-                ModelBox.ForeColor = Color.Black;
-            }
-        }
-
-        private void ModelBox_Leave(object sender, EventArgs e)
-        {
-            if (ModelBox.Text == "")
-            {
-                ModelBox.Text = "модель";
-                ModelBox.ForeColor = Color.Silver;
             }
         }
 
@@ -168,6 +131,24 @@ namespace CBP
                 MileageBox.Text = "";
                 MileageBox.ForeColor = Color.Black;
             }
+        }
+
+        private void ModelsComboBox_Click(object sender, EventArgs e)
+        {
+            if(ManufacturersComboBox.Text == "Производитель")
+            {
+                MessageBox.Show("Выберите производителя");
+            }
+        }
+
+        private void ManufacturersComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CMD.CommandText = $"SELECT Модель FROM Manufacturers WHERE Производитель = @Manufacturer";
+            CMD.Parameters.AddWithValue("@Manufacturer", ManufacturersComboBox.Text);
+            ModelsComboBox.DataSource = ModelsTable;
+            ModelsTable.Clear();
+            ModelsTable.Load(CMD.ExecuteReader());
+            ModelsComboBox.DisplayMember = "Модель";
         }
 
         private void MileageBox_Leave(object sender, EventArgs e)

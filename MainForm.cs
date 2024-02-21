@@ -64,19 +64,24 @@ namespace CBP
 
             DB.Open(); // open the connection with DB
 
-            CMD.CommandText = "SELECT ID,[Номер маршрута],[Количество остановок],[Начальная остановка],[Конечная остановка] FROM Routes";
+            CMD.CommandText = "SELECT Routes.ID, Routes.[Номер маршрута], Routes.[Количество остановок], bs_start.Название " +
+                "AS [Начальная остановка], bs_end.Название AS [Конечная остановка]" +
+                "FROM Routes JOIN BusStations bs_start ON Routes.[Начальная остановка] = bs_start.ID " +
+                "JOIN BusStations bs_end ON Routes.[Конечная остановка] = bs_end.ID";
             Routes.Clear();
             Routes.Load(CMD.ExecuteReader()); // perfrom the SQL request
 
-            CMD.CommandText = "SELECT ID,Марка, Модель, [Индивидуальный номер], [Номерной знак], [Дата поступления], Пробег FROM Buses";
+            CMD.CommandText = "SELECT B.ID, M.Производитель, M.Модель, B.[Индивидуальный номер], B.[Номерной знак], B.[Дата поступления], " +
+                "B.Пробег FROM Buses B JOIN Manufacturers M ON B.ManufacturersID = M.ID";
             Buses.Clear();
             Buses.Load(CMD.ExecuteReader());
 
-            CMD.CommandText = "SELECT ID,ФИО, [Закреплённый автобус], [Стаж вождения] FROM Drivers";
+            CMD.CommandText = "SELECT D.ID, D.ФИО, B.[Индивидуальный номер] AS [Закреплённый автобус], D.[Стаж вождения] " +
+                "FROM Drivers D JOIN Buses B ON D.[Закреплённый автобус] = B.ID";
             Drivers.Clear();
             Drivers.Load(CMD.ExecuteReader());
 
-            CMD.CommandText = "SELECT ID,Название,Маршруты FROM BusStations";
+            CMD.CommandText = "SELECT BS.ID, BS.Название, R.[Номер маршрута] FROM BusStations BS JOIN Routes R ON BS.[Номер маршрута] = R.ID";
             BusStations.Clear();
             BusStations.Load(CMD.ExecuteReader());
 
@@ -349,7 +354,7 @@ namespace CBP
             Routes.Clear();
             Routes.Load(CMD.ExecuteReader()); // perfrom the SQL request
 
-            CMD.CommandText = "SELECT ID,Марка, Модель, [Индивидуальный номер], [Номерной знак], [Дата поступления], Пробег FROM Buses";
+            CMD.CommandText = "SELECT ID,Производитель, Модель, [Индивидуальный номер], [Номерной знак], [Дата поступления], Пробег FROM Buses";
             Buses.Clear();
             Buses.Load(CMD.ExecuteReader());
 

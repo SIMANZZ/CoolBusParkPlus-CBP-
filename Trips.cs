@@ -15,7 +15,7 @@ namespace CBP
     {
         SQLiteConnection DB;
         SQLiteCommand CMD;
-        DataTable TripsTable, DriversTable, RoutesTable;
+        DataTable DriversTable, RoutesTable;
         public Trips()
         {
             InitializeComponent();
@@ -33,8 +33,6 @@ namespace CBP
             CMD.Connection = DB;
 
             DB.Open();
-
-            TripsTable = new DataTable();
 
             DriversTable = new DataTable();
 

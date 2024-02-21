@@ -42,15 +42,15 @@ namespace CBP
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("CoolBusPark@gmail.com", "cilwfsirfkxnjqxu"),
+                Credentials = new NetworkCredential("CoolBusPark@gmail.com", "nqczgdniqtbvjjbi"),
                 EnableSsl = true
             };
 
             var message = new MailMessage
             {
                 From = new MailAddress("CoolBusPark@gmail.com"),
-                Subject = "CBP Notification",
-                Body = $"<p>Вы успешно купили билет в приложении CBP</p>" + $"<p>Номер вашего чека: {numberofticket}</p>" + $"",
+                Subject = "DreamBus Notification",
+                Body = $"<p>Вы успешно купили билет в приложении DreamBus</p>" + $"<p>Номер вашего чека: {numberofticket}</p>" + $"",
                 IsBodyHtml = true
             };
             message.To.Add(Flags.EmailSupport);

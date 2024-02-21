@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buses));
             this.ExitButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            this.BrandBox = new System.Windows.Forms.TextBox();
-            this.ModelBox = new System.Windows.Forms.TextBox();
             this.IndividualNumberBox = new System.Windows.Forms.TextBox();
             this.LicensePlateBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,6 +41,8 @@
             this.MileageBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Calendar = new System.Windows.Forms.DateTimePicker();
+            this.ManufacturersComboBox = new System.Windows.Forms.ComboBox();
+            this.ModelsComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // ExitButton
@@ -75,30 +75,6 @@
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // BrandBox
-            // 
-            this.BrandBox.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BrandBox.ForeColor = System.Drawing.Color.Silver;
-            this.BrandBox.Location = new System.Drawing.Point(251, 14);
-            this.BrandBox.Name = "BrandBox";
-            this.BrandBox.Size = new System.Drawing.Size(306, 35);
-            this.BrandBox.TabIndex = 1;
-            this.BrandBox.Text = "марка";
-            this.BrandBox.Enter += new System.EventHandler(this.BrandBox_Enter);
-            this.BrandBox.Leave += new System.EventHandler(this.BrandBox_Leave);
-            // 
-            // ModelBox
-            // 
-            this.ModelBox.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ModelBox.ForeColor = System.Drawing.Color.Silver;
-            this.ModelBox.Location = new System.Drawing.Point(251, 73);
-            this.ModelBox.Name = "ModelBox";
-            this.ModelBox.Size = new System.Drawing.Size(306, 35);
-            this.ModelBox.TabIndex = 2;
-            this.ModelBox.Text = "модель";
-            this.ModelBox.Enter += new System.EventHandler(this.ModelBox_Enter);
-            this.ModelBox.Leave += new System.EventHandler(this.ModelBox_Leave);
             // 
             // IndividualNumberBox
             // 
@@ -158,11 +134,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(164, 21);
+            this.label1.Location = new System.Drawing.Point(78, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 24);
+            this.label1.Size = new System.Drawing.Size(165, 24);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Марка*";
+            this.label1.Text = "Производитель*";
             // 
             // label2
             // 
@@ -204,20 +180,49 @@
             this.Calendar.Size = new System.Drawing.Size(306, 35);
             this.Calendar.TabIndex = 36;
             // 
+            // ManufacturersComboBox
+            // 
+            this.ManufacturersComboBox.BackColor = System.Drawing.Color.White;
+            this.ManufacturersComboBox.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ManufacturersComboBox.ForeColor = System.Drawing.Color.Black;
+            this.ManufacturersComboBox.FormattingEnabled = true;
+            this.ManufacturersComboBox.Items.AddRange(new object[] {
+            "МАЗ",
+            "Белкомунмаш"});
+            this.ManufacturersComboBox.Location = new System.Drawing.Point(249, 14);
+            this.ManufacturersComboBox.Name = "ManufacturersComboBox";
+            this.ManufacturersComboBox.Size = new System.Drawing.Size(306, 38);
+            this.ManufacturersComboBox.TabIndex = 49;
+            this.ManufacturersComboBox.Text = "Производитель";
+            this.ManufacturersComboBox.SelectedIndexChanged += new System.EventHandler(this.ManufacturersComboBox_SelectedIndexChanged);
+            // 
+            // ModelsComboBox
+            // 
+            this.ModelsComboBox.BackColor = System.Drawing.Color.White;
+            this.ModelsComboBox.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ModelsComboBox.ForeColor = System.Drawing.Color.Black;
+            this.ModelsComboBox.FormattingEnabled = true;
+            this.ModelsComboBox.Location = new System.Drawing.Point(249, 73);
+            this.ModelsComboBox.Name = "ModelsComboBox";
+            this.ModelsComboBox.Size = new System.Drawing.Size(306, 38);
+            this.ModelsComboBox.TabIndex = 50;
+            this.ModelsComboBox.Text = "Модель";
+            this.ModelsComboBox.Click += new System.EventHandler(this.ModelsComboBox_Click);
+            // 
             // Buses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(572, 425);
+            this.Controls.Add(this.ModelsComboBox);
+            this.Controls.Add(this.ManufacturersComboBox);
             this.Controls.Add(this.Calendar);
             this.Controls.Add(this.MileageBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.BrandBox);
-            this.Controls.Add(this.ModelBox);
             this.Controls.Add(this.IndividualNumberBox);
             this.Controls.Add(this.LicensePlateBox);
             this.Controls.Add(this.label5);
@@ -242,8 +247,6 @@
 
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.TextBox BrandBox;
-        private System.Windows.Forms.TextBox ModelBox;
         private System.Windows.Forms.TextBox IndividualNumberBox;
         private System.Windows.Forms.TextBox LicensePlateBox;
         private System.Windows.Forms.Label label5;
@@ -254,5 +257,7 @@
         private System.Windows.Forms.TextBox MileageBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker Calendar;
+        private System.Windows.Forms.ComboBox ManufacturersComboBox;
+        private System.Windows.Forms.ComboBox ModelsComboBox;
     }
 }
