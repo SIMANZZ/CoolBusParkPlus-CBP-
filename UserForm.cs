@@ -27,8 +27,8 @@ namespace CBP
         string email;
         double Ticket;
         double TicketExpress;
-        int TravelCard;
-        int TravelCardExpress;
+        double TravelCard;
+        double TravelCardExpress;
         enum BusesType
         {
             BusExpress,
@@ -58,14 +58,10 @@ namespace CBP
 
             ID = int.Parse(CMD.ExecuteScalar().ToString());
 
-            CMD.CommandText = "SELECT [Номер чека],[Вид автобуса],[Вид документа],Количество, Стоимость FROM Tickets WHERE UserID = @ID";
-            CMD.Parameters.AddWithValue("@ID", ID);
-
             CostTable = new DataTable();
             CostGrid.DataSource = CostTable;
 
-            CostTable.Clear();
-            CostTable.Load(CMD.ExecuteReader());
+            TravelNumberBox.Visible = false;
 
             CMD.CommandText = $"SELECT email FROM Users WHERE ID = {ID}";
             email = CMD.ExecuteScalar().ToString();
@@ -74,26 +70,33 @@ namespace CBP
             LoginLabel.Text = Flags.CurrentLogin;
             MailLabel.Text = email;
 
-            //Work with txt
-            FileInfo fileinfo = new FileInfo("Costs.txt");
-            if (fileinfo.Exists)
-            {
-                string[] filetext = File.ReadAllLines(fileinfo.FullName);
-                Ticket = double.Parse(filetext[0]);
-                TicketExpress = double.Parse(filetext[1]);
-                TravelCard = int.Parse(filetext[2]);
-                TravelCardExpress = int.Parse(filetext[3]);
-            }
-            else
-            {
-                File.WriteAllLines(fileinfo.FullName, new[] { "0,90", "1,05", "25","32"});
-            }
-            TravelNumberBox.Visible= false;
-
-            CMD.CommandText = "SELECT [Номер чека],[Вид автобуса],[Вид документа],Количество, Стоимость FROM Tickets WHERE UserID = @ID";
+            CMD.CommandText = "SELECT T.[Номер чека], TD.[Вид автобуса], TD.[Вид документа], T.Количество, " +
+                  "CAST((CAST(T.Количество AS FLOAT) * CAST(REPLACE(TD.Стоимость, ',', '.') AS FLOAT)) AS TEXT) AS Стоимость " +
+                  "FROM Tickets T JOIN TicketDetails TD ON T.TicketDetailsID = TD.ID WHERE UserID = @ID";
             CMD.Parameters.AddWithValue("@ID", ID);
             CostTable.Clear();
             CostTable.Load(CMD.ExecuteReader());
+
+            CMD.CommandText = "SELECT Стоимость FROM TicketDetails";
+
+            List<double> Prices = new List<double>();
+
+            SQLiteDataReader reader = CMD.ExecuteReader();
+
+            while (reader.Read())
+            {
+                double price = double.Parse(reader.GetString(0));
+                Prices.Add(price);
+            }
+
+            reader.Close();
+
+            double[] PricesArray = Prices.ToArray();
+
+            TravelCard = PricesArray[0];
+            TravelCardExpress = PricesArray[1];
+            Ticket = PricesArray[2];
+            TicketExpress = PricesArray[3];
         }
 
         private void мойАккаунтToolStripMenuItem_Click(object sender, EventArgs e)
@@ -123,7 +126,9 @@ namespace CBP
         private void моиБилетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TabControl.SelectedTab = MyTickets;
-            CMD.CommandText = "SELECT [Номер чека],[Вид автобуса],[Вид документа],Количество, Стоимость FROM Tickets WHERE UserID = @ID";
+            CMD.CommandText = "SELECT T.[Номер чека], TD.[Вид автобуса], TD.[Вид документа], T.Количество, " +
+                  "CAST((CAST(T.Количество AS FLOAT) * CAST(REPLACE(TD.Стоимость, ',', '.') AS FLOAT)) AS TEXT) AS Стоимость " +
+                  "FROM Tickets T JOIN TicketDetails TD ON T.TicketDetailsID = TD.ID WHERE UserID = @ID";
             CMD.Parameters.AddWithValue("@ID", ID);
             CostTable.Clear();
             CostTable.Load(CMD.ExecuteReader());
@@ -131,8 +136,7 @@ namespace CBP
 
         private void OrderTicket_Click(object sender, EventArgs e)
         {
-            int sum = 0;
-            double doublesum = 0;
+            double sum = 0;
             if(TravelNumberBox.Text == "количество поездок" && TravelCardscomboBox.SelectedIndex == 1)
             {
                 MessageBox.Show("Введите количество поездок");
@@ -141,7 +145,10 @@ namespace CBP
             {
                 if(int.TryParse(TravelNumberBox.Text,out var parsedNumber) || TravelCardscomboBox.SelectedIndex == 0)
                 {
-                    CMD.CommandText = "INSERT INTO Tickets ([Номер чека],[Вид автобуса],[Вид документа],Количество, Стоимость, UserID) VALUES (@NumberOfTicket, @TypeOfBus, @TypeOfDocument, @Numbers, @Cost, @ID)";
+                    CMD.CommandText = "INSERT INTO Tickets ([Номер чека], TicketDetailsID, Количество, UserID) " +
+                        "VALUES (@NumberOfTicket, (SELECT ID FROM TicketDetails " +
+                        "WHERE [Вид автобуса] = @TypeOfBus AND [Вид документа] = @TypeOfDocument), " +
+                        "@Numbers, @ID)";
                     CMD.Parameters.AddWithValue("@ID", ID);
                     if (BusRadioButton.Checked)
                     {
@@ -164,10 +171,10 @@ namespace CBP
                             }
                             else 
                             { 
-                                doublesum = Ticket * double.Parse(TravelNumberBox.Text); Flags.MainSum = doublesum;
+                                sum = Ticket * double.Parse(TravelNumberBox.Text); Flags.MainSum = sum;
                                 CMD.Parameters.AddWithValue("@TypeOfDocument", "Поездки");
                                 CMD.Parameters.AddWithValue("@Numbers", int.Parse(TravelNumberBox.Text));
-                                CMD.Parameters.AddWithValue("@Cost", doublesum.ToString());
+                                CMD.Parameters.AddWithValue("@Cost", sum.ToString());
                             }
                             break;
                         case BusesType.BusExpress:
@@ -181,10 +188,10 @@ namespace CBP
                             }
                             else 
                             { 
-                                doublesum = TicketExpress * double.Parse(TravelNumberBox.Text); Flags.MainSum = doublesum;
+                                sum = TicketExpress * double.Parse(TravelNumberBox.Text); Flags.MainSum = sum;
                                 CMD.Parameters.AddWithValue("@TypeOfDocument", "Поездки");
                                 CMD.Parameters.AddWithValue("@Numbers", int.Parse(TravelNumberBox.Text));
-                                CMD.Parameters.AddWithValue("@Cost", doublesum.ToString());
+                                CMD.Parameters.AddWithValue("@Cost", sum.ToString());
                             }
                             break;
                     }
@@ -198,7 +205,9 @@ namespace CBP
                         CostTable.Clear();
                         CostTable.Load(CMD.ExecuteReader());
 
-                        CMD.CommandText = "SELECT [Номер чека],[Вид автобуса],[Вид документа],Количество, Стоимость FROM Tickets WHERE UserID = @ID";
+                        CMD.CommandText = "SELECT T.[Номер чека], TD.[Вид автобуса], TD.[Вид документа], T.Количество, " +
+                            "CAST((CAST(T.Количество AS FLOAT) * CAST(REPLACE(TD.Стоимость, ',', '.') AS FLOAT)) AS TEXT) AS Стоимость " +
+                            "FROM Tickets T JOIN TicketDetails TD ON T.TicketDetailsID = TD.ID WHERE UserID = @ID";
                         CMD.Parameters.AddWithValue("@ID", ID);
                         CostTable.Clear();
                         CostTable.Load(CMD.ExecuteReader());

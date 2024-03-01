@@ -123,10 +123,10 @@
             this.TabControl.Controls.Add(this.MyAccountTab);
             this.TabControl.Controls.Add(this.MyTickets);
             this.TabControl.Controls.Add(this.OrderTicketTab);
-            this.TabControl.Location = new System.Drawing.Point(-7, 38);
+            this.TabControl.Location = new System.Drawing.Point(0, 41);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(1934, 1027);
+            this.TabControl.Size = new System.Drawing.Size(1920, 1020);
             this.TabControl.TabIndex = 1;
             // 
             // MyAccountTab
@@ -140,7 +140,7 @@
             this.MyAccountTab.Location = new System.Drawing.Point(4, 4);
             this.MyAccountTab.Name = "MyAccountTab";
             this.MyAccountTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MyAccountTab.Size = new System.Drawing.Size(1926, 1001);
+            this.MyAccountTab.Size = new System.Drawing.Size(1912, 994);
             this.MyAccountTab.TabIndex = 0;
             this.MyAccountTab.Text = "MyAccount";
             this.MyAccountTab.UseVisualStyleBackColor = true;
@@ -216,7 +216,7 @@
             this.MyTickets.Controls.Add(this.CostGrid);
             this.MyTickets.Location = new System.Drawing.Point(4, 4);
             this.MyTickets.Name = "MyTickets";
-            this.MyTickets.Size = new System.Drawing.Size(1926, 1001);
+            this.MyTickets.Size = new System.Drawing.Size(1912, 974);
             this.MyTickets.TabIndex = 3;
             this.MyTickets.Text = "MyTickets";
             this.MyTickets.UseVisualStyleBackColor = true;
@@ -281,7 +281,7 @@
             this.CostGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.CostGrid.RowTemplate.ReadOnly = true;
             this.CostGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CostGrid.Size = new System.Drawing.Size(1926, 1001);
+            this.CostGrid.Size = new System.Drawing.Size(1912, 974);
             this.CostGrid.TabIndex = 15;
             // 
             // OrderTicketTab
@@ -294,7 +294,7 @@
             this.OrderTicketTab.Controls.Add(this.TravelCardscomboBox);
             this.OrderTicketTab.Location = new System.Drawing.Point(4, 4);
             this.OrderTicketTab.Name = "OrderTicketTab";
-            this.OrderTicketTab.Size = new System.Drawing.Size(1926, 1001);
+            this.OrderTicketTab.Size = new System.Drawing.Size(1912, 974);
             this.OrderTicketTab.TabIndex = 2;
             this.OrderTicketTab.Text = "OrderTicket";
             this.OrderTicketTab.UseVisualStyleBackColor = true;

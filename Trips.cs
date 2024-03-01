@@ -58,7 +58,8 @@ namespace CBP
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            CMD.CommandText = "INSERT INTO Trips (Водитель,Маршрут,Дата) VALUES (@Driver, @Route, @Date)";
+            CMD.CommandText = "INSERT INTO Trips (Водитель,Маршрут,Дата) VALUES ((SELECT ID FROM Drivers WHERE ФИО = @Driver), " +
+                "(SELECT ID FROM Routes WHERE [Номер маршрута] = @Route), @Date)";
             CMD.Parameters.AddWithValue("@Driver", DriversComboBox.Text);
             CMD.Parameters.AddWithValue("@Route", RoutesComboBox.Text);
             CMD.Parameters.AddWithValue("@Date", Calendar.Text);

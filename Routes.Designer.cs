@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Routes));
             this.NumberOfRouteBox = new System.Windows.Forms.TextBox();
             this.NumberOfStationsBox = new System.Windows.Forms.TextBox();
-            this.StartStationBox = new System.Windows.Forms.TextBox();
-            this.EndStationBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
+            this.BusStationsStartComboBox = new System.Windows.Forms.ComboBox();
+            this.BusStationsEndComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // NumberOfRouteBox
@@ -64,30 +64,6 @@
             this.NumberOfStationsBox.Text = "количество остановок";
             this.NumberOfStationsBox.Enter += new System.EventHandler(this.NumberOfStationsBox_Enter);
             this.NumberOfStationsBox.Leave += new System.EventHandler(this.NumberOfStationsBox_Leave);
-            // 
-            // StartStationBox
-            // 
-            this.StartStationBox.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StartStationBox.ForeColor = System.Drawing.Color.Silver;
-            this.StartStationBox.Location = new System.Drawing.Point(253, 130);
-            this.StartStationBox.Name = "StartStationBox";
-            this.StartStationBox.Size = new System.Drawing.Size(306, 35);
-            this.StartStationBox.TabIndex = 3;
-            this.StartStationBox.Text = "начальная остановка";
-            this.StartStationBox.Enter += new System.EventHandler(this.StartStationBox_Enter);
-            this.StartStationBox.Leave += new System.EventHandler(this.StartStationBox_Leave);
-            // 
-            // EndStationBox
-            // 
-            this.EndStationBox.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EndStationBox.ForeColor = System.Drawing.Color.Silver;
-            this.EndStationBox.Location = new System.Drawing.Point(253, 190);
-            this.EndStationBox.Name = "EndStationBox";
-            this.EndStationBox.Size = new System.Drawing.Size(306, 35);
-            this.EndStationBox.TabIndex = 4;
-            this.EndStationBox.Text = "конечная остановка";
-            this.EndStationBox.Enter += new System.EventHandler(this.EndStationBox_Enter);
-            this.EndStationBox.Leave += new System.EventHandler(this.EndStationBox_Leave);
             // 
             // label5
             // 
@@ -160,18 +136,48 @@
             this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
+            // BusStationsStartComboBox
+            // 
+            this.BusStationsStartComboBox.BackColor = System.Drawing.Color.White;
+            this.BusStationsStartComboBox.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BusStationsStartComboBox.ForeColor = System.Drawing.Color.Black;
+            this.BusStationsStartComboBox.FormattingEnabled = true;
+            this.BusStationsStartComboBox.Items.AddRange(new object[] {
+            "МАЗ",
+            "Белкомунмаш"});
+            this.BusStationsStartComboBox.Location = new System.Drawing.Point(253, 130);
+            this.BusStationsStartComboBox.Name = "BusStationsStartComboBox";
+            this.BusStationsStartComboBox.Size = new System.Drawing.Size(306, 38);
+            this.BusStationsStartComboBox.TabIndex = 50;
+            this.BusStationsStartComboBox.Text = "Название";
+            // 
+            // BusStationsEndComboBox
+            // 
+            this.BusStationsEndComboBox.BackColor = System.Drawing.Color.White;
+            this.BusStationsEndComboBox.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BusStationsEndComboBox.ForeColor = System.Drawing.Color.Black;
+            this.BusStationsEndComboBox.FormattingEnabled = true;
+            this.BusStationsEndComboBox.Items.AddRange(new object[] {
+            "МАЗ",
+            "Белкомунмаш"});
+            this.BusStationsEndComboBox.Location = new System.Drawing.Point(251, 190);
+            this.BusStationsEndComboBox.Name = "BusStationsEndComboBox";
+            this.BusStationsEndComboBox.Size = new System.Drawing.Size(306, 38);
+            this.BusStationsEndComboBox.TabIndex = 51;
+            this.BusStationsEndComboBox.Text = "Название";
+            // 
             // Routes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(570, 308);
+            this.Controls.Add(this.BusStationsEndComboBox);
+            this.Controls.Add(this.BusStationsStartComboBox);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.NumberOfRouteBox);
             this.Controls.Add(this.NumberOfStationsBox);
-            this.Controls.Add(this.StartStationBox);
-            this.Controls.Add(this.EndStationBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -194,13 +200,13 @@
 
         private System.Windows.Forms.TextBox NumberOfRouteBox;
         private System.Windows.Forms.TextBox NumberOfStationsBox;
-        private System.Windows.Forms.TextBox StartStationBox;
-        private System.Windows.Forms.TextBox EndStationBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.ComboBox BusStationsStartComboBox;
+        private System.Windows.Forms.ComboBox BusStationsEndComboBox;
     }
 }

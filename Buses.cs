@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Xml.Linq;
 
 namespace CBP
 {
@@ -17,7 +18,7 @@ namespace CBP
 
         SQLiteConnection DB;
         SQLiteCommand CMD;
-        DataTable BusesTable, ModelsTable;
+        DataTable BusesTable, ModelsTable, ManufacturerTable;
         public Buses()
         {
             InitializeComponent();
@@ -39,6 +40,14 @@ namespace CBP
             BusesTable = new DataTable();
 
             ModelsTable = new DataTable();
+
+            ManufacturerTable = new DataTable();
+
+            CMD.CommandText = "SELECT DISTINCT Производитель FROM Manufacturers";
+            ManufacturersComboBox.DataSource = ManufacturerTable;
+            ManufacturerTable.Clear();
+            ManufacturerTable.Load(CMD.ExecuteReader());
+            ManufacturersComboBox.DisplayMember = "Производитель";
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -66,11 +75,15 @@ namespace CBP
                 {
                     if (Regex.IsMatch(LicensePlateBox.Text, pattern, RegexOptions.IgnoreCase))
                     {
-                        CMD.CommandText = "INSERT INTO Buses (Марка,Модель,[Индивидуальный номер],[Номерной знак],[Дата поступления],Пробег) VALUES (@Brand, @Model, @IndividualNumber,@LicensePlate,@Date,@Mileage)";
+                        CMD.CommandText = "INSERT INTO Buses (ManufacturersID, [Индивидуальный номер], [Номерной знак], [Дата поступления], Пробег) " +
+                            "VALUES ((SELECT ID FROM Manufacturers WHERE Производитель = @Manufacture AND Модель = @Model), " +
+                            "@IndividualNumber, @LicensePlate, @Date, @Mileage)";
                         CMD.Parameters.AddWithValue("@IndividualNumber", IndividualNumberBox.Text);
                         CMD.Parameters.AddWithValue("@LicensePlate", LicensePlateBox.Text);
                         CMD.Parameters.AddWithValue("@Date", String.Format("{0:dd.MM.yyyy}", dDate));
                         CMD.Parameters.AddWithValue("@Mileage", MileageBox.Text);
+                        CMD.Parameters.AddWithValue("@Manufacture", ManufacturersComboBox.Text);
+                        CMD.Parameters.AddWithValue("@Model", ModelsComboBox.Text);
                         BusesTable.Clear();
                         BusesTable.Load(CMD.ExecuteReader());
                         MessageBox.Show("Новый автобус успешно добавлен");

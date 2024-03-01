@@ -186,9 +186,6 @@
             this.ManufacturersComboBox.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ManufacturersComboBox.ForeColor = System.Drawing.Color.Black;
             this.ManufacturersComboBox.FormattingEnabled = true;
-            this.ManufacturersComboBox.Items.AddRange(new object[] {
-            "МАЗ",
-            "Белкомунмаш"});
             this.ManufacturersComboBox.Location = new System.Drawing.Point(249, 14);
             this.ManufacturersComboBox.Name = "ManufacturersComboBox";
             this.ManufacturersComboBox.Size = new System.Drawing.Size(306, 38);

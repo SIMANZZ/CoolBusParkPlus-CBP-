@@ -53,60 +53,53 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.StationsButton = new System.Windows.Forms.Button();
             this.DriversButton = new System.Windows.Forms.Button();
             this.BusesButton = new System.Windows.Forms.Button();
             this.RoutesButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.RoutesGrid = new System.Windows.Forms.DataGridView();
-            this.SearchBox = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.RemoveButton = new System.Windows.Forms.Button();
-            this.AddButton = new System.Windows.Forms.Button();
-            this.TabControl = new System.Windows.Forms.TabControl();
-            this.RoutesTab = new System.Windows.Forms.TabPage();
-            this.BusesTab = new System.Windows.Forms.TabPage();
-            this.BusesGrid = new System.Windows.Forms.DataGridView();
-            this.DriversTab = new System.Windows.Forms.TabPage();
-            this.DriversGrid = new System.Windows.Forms.DataGridView();
-            this.PassangersTab = new System.Windows.Forms.TabPage();
-            this.PassangersGrid = new System.Windows.Forms.DataGridView();
-            this.BusStationsTab = new System.Windows.Forms.TabPage();
-            this.BusStationsGrid = new System.Windows.Forms.DataGridView();
-            this.TripsButton = new System.Windows.Forms.Button();
-            this.TripsTab = new System.Windows.Forms.TabPage();
-            this.TripsGrid = new System.Windows.Forms.DataGridView();
-            this.UpdateButton = new System.Windows.Forms.Button();
-            this.SearchButton = new System.Windows.Forms.Button();
             this.TripIcon = new System.Windows.Forms.Button();
+            this.TripsButton = new System.Windows.Forms.Button();
             this.StationIcon = new System.Windows.Forms.Button();
             this.RouteIcon = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.DriverIcon = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BusIcon = new System.Windows.Forms.Button();
+            this.SearchBox = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBoxValue = new System.Windows.Forms.ComboBox();
+            this.UpdateButton = new System.Windows.Forms.Button();
+            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
+            this.SearchButton = new System.Windows.Forms.Button();
+            this.RemoveButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.TripsTab = new System.Windows.Forms.TabPage();
+            this.TripsGrid = new System.Windows.Forms.DataGridView();
+            this.BusStationsTab = new System.Windows.Forms.TabPage();
+            this.BusStationsGrid = new System.Windows.Forms.DataGridView();
+            this.DriversTab = new System.Windows.Forms.TabPage();
+            this.DriversGrid = new System.Windows.Forms.DataGridView();
+            this.BusesTab = new System.Windows.Forms.TabPage();
+            this.BusesGrid = new System.Windows.Forms.DataGridView();
+            this.RoutesTab = new System.Windows.Forms.TabPage();
+            this.RoutesGrid = new System.Windows.Forms.DataGridView();
+            this.TabControl = new System.Windows.Forms.TabControl();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RoutesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            this.TabControl.SuspendLayout();
-            this.RoutesTab.SuspendLayout();
-            this.BusesTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BusesGrid)).BeginInit();
-            this.DriversTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DriversGrid)).BeginInit();
-            this.PassangersTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PassangersGrid)).BeginInit();
-            this.BusStationsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BusStationsGrid)).BeginInit();
             this.TripsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TripsGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.BusStationsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BusStationsGrid)).BeginInit();
+            this.DriversTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DriversGrid)).BeginInit();
+            this.BusesTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BusesGrid)).BeginInit();
+            this.RoutesTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RoutesGrid)).BeginInit();
+            this.TabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // StationsButton
@@ -209,6 +202,74 @@
             this.panel1.Size = new System.Drawing.Size(297, 1042);
             this.panel1.TabIndex = 12;
             // 
+            // TripIcon
+            // 
+            this.TripIcon.BackColor = System.Drawing.Color.RoyalBlue;
+            this.TripIcon.BackgroundImage = global::CBP.Properties.Resources.trips_icon;
+            this.TripIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.TripIcon.FlatAppearance.BorderSize = 0;
+            this.TripIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TripIcon.Location = new System.Drawing.Point(92, 497);
+            this.TripIcon.Name = "TripIcon";
+            this.TripIcon.Size = new System.Drawing.Size(48, 47);
+            this.TripIcon.TabIndex = 23;
+            this.TripIcon.UseVisualStyleBackColor = false;
+            this.TripIcon.Click += new System.EventHandler(this.TripIcon_Click);
+            this.TripIcon.MouseEnter += new System.EventHandler(this.TripIcon_MouseEnter);
+            this.TripIcon.MouseLeave += new System.EventHandler(this.TripIcon_MouseLeave);
+            // 
+            // TripsButton
+            // 
+            this.TripsButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.TripsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.TripsButton.FlatAppearance.BorderSize = 0;
+            this.TripsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TripsButton.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TripsButton.ForeColor = System.Drawing.Color.White;
+            this.TripsButton.Location = new System.Drawing.Point(74, 494);
+            this.TripsButton.Margin = new System.Windows.Forms.Padding(0);
+            this.TripsButton.Name = "TripsButton";
+            this.TripsButton.Size = new System.Drawing.Size(222, 57);
+            this.TripsButton.TabIndex = 22;
+            this.TripsButton.Text = "Рейсы";
+            this.TripsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TripsButton.UseVisualStyleBackColor = false;
+            this.TripsButton.Click += new System.EventHandler(this.TripsButton_Click);
+            this.TripsButton.MouseEnter += new System.EventHandler(this.TripsButton_MouseEnter);
+            this.TripsButton.MouseLeave += new System.EventHandler(this.TripsButton_MouseLeave);
+            // 
+            // StationIcon
+            // 
+            this.StationIcon.BackColor = System.Drawing.Color.RoyalBlue;
+            this.StationIcon.BackgroundImage = global::CBP.Properties.Resources.busstation_icon;
+            this.StationIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.StationIcon.FlatAppearance.BorderSize = 0;
+            this.StationIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StationIcon.Location = new System.Drawing.Point(92, 444);
+            this.StationIcon.Name = "StationIcon";
+            this.StationIcon.Size = new System.Drawing.Size(48, 47);
+            this.StationIcon.TabIndex = 21;
+            this.StationIcon.UseVisualStyleBackColor = false;
+            this.StationIcon.Click += new System.EventHandler(this.StationIcon_Click);
+            this.StationIcon.MouseEnter += new System.EventHandler(this.StationIcon_MouseEnter);
+            this.StationIcon.MouseLeave += new System.EventHandler(this.StationIcon_MouseLeave);
+            // 
+            // RouteIcon
+            // 
+            this.RouteIcon.BackColor = System.Drawing.Color.RoyalBlue;
+            this.RouteIcon.BackgroundImage = global::CBP.Properties.Resources.route_icon;
+            this.RouteIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.RouteIcon.FlatAppearance.BorderSize = 0;
+            this.RouteIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RouteIcon.Location = new System.Drawing.Point(91, 274);
+            this.RouteIcon.Name = "RouteIcon";
+            this.RouteIcon.Size = new System.Drawing.Size(42, 45);
+            this.RouteIcon.TabIndex = 17;
+            this.RouteIcon.UseVisualStyleBackColor = false;
+            this.RouteIcon.Click += new System.EventHandler(this.RouteIcon_Click);
+            this.RouteIcon.MouseEnter += new System.EventHandler(this.RouteIcon_MouseEnter);
+            this.RouteIcon.MouseLeave += new System.EventHandler(this.RouteIcon_MouseLeave);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -221,68 +282,48 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Dream Bus";
             // 
-            // RoutesGrid
+            // DriverIcon
             // 
-            this.RoutesGrid.AllowUserToAddRows = false;
-            this.RoutesGrid.AllowUserToDeleteRows = false;
-            this.RoutesGrid.AllowUserToResizeColumns = false;
-            this.RoutesGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.RoutesGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.RoutesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.RoutesGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.RoutesGrid.BackgroundColor = System.Drawing.Color.White;
-            this.RoutesGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RoutesGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.RoutesGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RoutesGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.RoutesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RoutesGrid.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RoutesGrid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.RoutesGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RoutesGrid.EnableHeadersVisualStyles = false;
-            this.RoutesGrid.GridColor = System.Drawing.Color.Black;
-            this.RoutesGrid.Location = new System.Drawing.Point(3, 3);
-            this.RoutesGrid.Name = "RoutesGrid";
-            this.RoutesGrid.ReadOnly = true;
-            this.RoutesGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RoutesGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.RoutesGrid.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.RoutesGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.RoutesGrid.RowTemplate.ReadOnly = true;
-            this.RoutesGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.RoutesGrid.Size = new System.Drawing.Size(1582, 938);
-            this.RoutesGrid.TabIndex = 14;
+            this.DriverIcon.BackColor = System.Drawing.Color.RoyalBlue;
+            this.DriverIcon.BackgroundImage = global::CBP.Properties.Resources.driver_icon;
+            this.DriverIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DriverIcon.FlatAppearance.BorderSize = 0;
+            this.DriverIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DriverIcon.Location = new System.Drawing.Point(91, 388);
+            this.DriverIcon.Name = "DriverIcon";
+            this.DriverIcon.Size = new System.Drawing.Size(42, 45);
+            this.DriverIcon.TabIndex = 19;
+            this.DriverIcon.UseVisualStyleBackColor = false;
+            this.DriverIcon.Click += new System.EventHandler(this.DriverIcon_Click);
+            this.DriverIcon.MouseEnter += new System.EventHandler(this.DriverIcon_MouseEnter);
+            this.DriverIcon.MouseLeave += new System.EventHandler(this.DriverIcon_MouseLeave);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.pictureBox2.Image = global::CBP.Properties.Resources.bus1;
+            this.pictureBox2.Location = new System.Drawing.Point(12, -35);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(275, 253);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // BusIcon
+            // 
+            this.BusIcon.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BusIcon.BackgroundImage = global::CBP.Properties.Resources.bus_icon;
+            this.BusIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BusIcon.FlatAppearance.BorderSize = 0;
+            this.BusIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BusIcon.Location = new System.Drawing.Point(91, 331);
+            this.BusIcon.Name = "BusIcon";
+            this.BusIcon.Size = new System.Drawing.Size(42, 45);
+            this.BusIcon.TabIndex = 18;
+            this.BusIcon.UseVisualStyleBackColor = false;
+            this.BusIcon.Click += new System.EventHandler(this.BusIcon_Click);
+            this.BusIcon.MouseEnter += new System.EventHandler(this.BusIcon_MouseEnter);
+            this.BusIcon.MouseLeave += new System.EventHandler(this.BusIcon_MouseLeave);
             // 
             // SearchBox
             // 
@@ -299,7 +340,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.comboBoxValue);
             this.panel2.Controls.Add(this.UpdateButton);
+            this.panel2.Controls.Add(this.comboBoxFilter);
             this.panel2.Controls.Add(this.SearchButton);
             this.panel2.Controls.Add(this.RemoveButton);
             this.panel2.Controls.Add(this.AddButton);
@@ -308,6 +351,62 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1606, 90);
             this.panel2.TabIndex = 17;
+            // 
+            // comboBoxValue
+            // 
+            this.comboBoxValue.BackColor = System.Drawing.Color.White;
+            this.comboBoxValue.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxValue.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxValue.FormattingEnabled = true;
+            this.comboBoxValue.Location = new System.Drawing.Point(795, 20);
+            this.comboBoxValue.Name = "comboBoxValue";
+            this.comboBoxValue.Size = new System.Drawing.Size(255, 38);
+            this.comboBoxValue.TabIndex = 51;
+            this.comboBoxValue.Text = "значение";
+            this.comboBoxValue.SelectedIndexChanged += new System.EventHandler(this.comboBoxValue_SelectedIndexChanged);
+            this.comboBoxValue.Click += new System.EventHandler(this.comboBoxValue_Click);
+            // 
+            // UpdateButton
+            // 
+            this.UpdateButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.UpdateButton.BackgroundImage = global::CBP.Properties.Resources.update_icon;
+            this.UpdateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.UpdateButton.FlatAppearance.BorderSize = 0;
+            this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateButton.Location = new System.Drawing.Point(362, 23);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(31, 36);
+            this.UpdateButton.TabIndex = 22;
+            this.UpdateButton.UseVisualStyleBackColor = false;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
+            // comboBoxFilter
+            // 
+            this.comboBoxFilter.BackColor = System.Drawing.Color.White;
+            this.comboBoxFilter.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxFilter.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxFilter.FormattingEnabled = true;
+            this.comboBoxFilter.Location = new System.Drawing.Point(466, 20);
+            this.comboBoxFilter.Name = "comboBoxFilter";
+            this.comboBoxFilter.Size = new System.Drawing.Size(230, 38);
+            this.comboBoxFilter.TabIndex = 50;
+            this.comboBoxFilter.Text = "поле";
+            this.comboBoxFilter.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilter_SelectedIndexChanged);
+            this.comboBoxFilter.Click += new System.EventHandler(this.comboBoxFilter_Click);
+            // 
+            // SearchButton
+            // 
+            this.SearchButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.SearchButton.BackgroundImage = global::CBP.Properties.Resources.search_icon;
+            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.SearchButton.FlatAppearance.BorderSize = 0;
+            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchButton.Location = new System.Drawing.Point(316, 23);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(31, 36);
+            this.SearchButton.TabIndex = 21;
+            this.SearchButton.UseVisualStyleBackColor = false;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // RemoveButton
             // 
@@ -341,64 +440,107 @@
             this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // TabControl
+            // TripsTab
             // 
-            this.TabControl.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.TabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TabControl.Controls.Add(this.RoutesTab);
-            this.TabControl.Controls.Add(this.BusesTab);
-            this.TabControl.Controls.Add(this.DriversTab);
-            this.TabControl.Controls.Add(this.PassangersTab);
-            this.TabControl.Controls.Add(this.BusStationsTab);
-            this.TabControl.Controls.Add(this.TripsTab);
-            this.TabControl.Location = new System.Drawing.Point(300, 89);
-            this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(1596, 970);
-            this.TabControl.TabIndex = 18;
+            this.TripsTab.Controls.Add(this.TripsGrid);
+            this.TripsTab.Location = new System.Drawing.Point(4, 4);
+            this.TripsTab.Name = "TripsTab";
+            this.TripsTab.Size = new System.Drawing.Size(1596, 874);
+            this.TripsTab.TabIndex = 5;
+            this.TripsTab.Text = "Trips";
+            this.TripsTab.UseVisualStyleBackColor = true;
             // 
-            // RoutesTab
+            // TripsGrid
             // 
-            this.RoutesTab.Controls.Add(this.RoutesGrid);
-            this.RoutesTab.Location = new System.Drawing.Point(4, 4);
-            this.RoutesTab.Name = "RoutesTab";
-            this.RoutesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.RoutesTab.Size = new System.Drawing.Size(1588, 944);
-            this.RoutesTab.TabIndex = 0;
-            this.RoutesTab.Text = "Routes";
-            this.RoutesTab.UseVisualStyleBackColor = true;
+            this.TripsGrid.AllowUserToAddRows = false;
+            this.TripsGrid.AllowUserToDeleteRows = false;
+            this.TripsGrid.AllowUserToResizeColumns = false;
+            this.TripsGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.TripsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.TripsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TripsGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TripsGrid.BackgroundColor = System.Drawing.Color.White;
+            this.TripsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TripsGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.TripsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TripsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.TripsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TripsGrid.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TripsGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TripsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TripsGrid.EnableHeadersVisualStyles = false;
+            this.TripsGrid.GridColor = System.Drawing.Color.Black;
+            this.TripsGrid.Location = new System.Drawing.Point(0, 0);
+            this.TripsGrid.Name = "TripsGrid";
+            this.TripsGrid.ReadOnly = true;
+            this.TripsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TripsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.TripsGrid.RowHeadersVisible = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.TripsGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.TripsGrid.RowTemplate.ReadOnly = true;
+            this.TripsGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TripsGrid.Size = new System.Drawing.Size(1596, 874);
+            this.TripsGrid.TabIndex = 16;
             // 
-            // BusesTab
+            // BusStationsTab
             // 
-            this.BusesTab.Controls.Add(this.BusesGrid);
-            this.BusesTab.Location = new System.Drawing.Point(4, 4);
-            this.BusesTab.Name = "BusesTab";
-            this.BusesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.BusesTab.Size = new System.Drawing.Size(1588, 944);
-            this.BusesTab.TabIndex = 1;
-            this.BusesTab.Text = "Buses";
-            this.BusesTab.UseVisualStyleBackColor = true;
+            this.BusStationsTab.Controls.Add(this.BusStationsGrid);
+            this.BusStationsTab.Location = new System.Drawing.Point(4, 4);
+            this.BusStationsTab.Name = "BusStationsTab";
+            this.BusStationsTab.Size = new System.Drawing.Size(1596, 874);
+            this.BusStationsTab.TabIndex = 4;
+            this.BusStationsTab.Text = "BusStations";
+            this.BusStationsTab.UseVisualStyleBackColor = true;
             // 
-            // BusesGrid
+            // BusStationsGrid
             // 
-            this.BusesGrid.AllowUserToAddRows = false;
-            this.BusesGrid.AllowUserToDeleteRows = false;
-            this.BusesGrid.AllowUserToResizeColumns = false;
-            this.BusesGrid.AllowUserToResizeRows = false;
+            this.BusStationsGrid.AllowUserToAddRows = false;
+            this.BusStationsGrid.AllowUserToDeleteRows = false;
+            this.BusStationsGrid.AllowUserToResizeColumns = false;
+            this.BusStationsGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.BusesGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.BusesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.BusesGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.BusesGrid.BackgroundColor = System.Drawing.Color.White;
-            this.BusesGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.BusesGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.BusesGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.BusStationsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.BusStationsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BusStationsGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.BusStationsGrid.BackgroundColor = System.Drawing.Color.White;
+            this.BusStationsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BusStationsGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.BusStationsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -406,24 +548,24 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BusesGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.BusesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BusesGrid.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BusStationsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.BusStationsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BusStationsGrid.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BusesGrid.DefaultCellStyle = dataGridViewCellStyle8;
-            this.BusesGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BusesGrid.EnableHeadersVisualStyles = false;
-            this.BusesGrid.GridColor = System.Drawing.Color.Black;
-            this.BusesGrid.Location = new System.Drawing.Point(3, 3);
-            this.BusesGrid.Name = "BusesGrid";
-            this.BusesGrid.ReadOnly = true;
-            this.BusesGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.BusStationsGrid.DefaultCellStyle = dataGridViewCellStyle8;
+            this.BusStationsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BusStationsGrid.EnableHeadersVisualStyles = false;
+            this.BusStationsGrid.GridColor = System.Drawing.Color.Black;
+            this.BusStationsGrid.Location = new System.Drawing.Point(0, 0);
+            this.BusStationsGrid.Name = "BusStationsGrid";
+            this.BusStationsGrid.ReadOnly = true;
+            this.BusStationsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -431,25 +573,25 @@
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BusesGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.BusesGrid.RowHeadersVisible = false;
+            this.BusStationsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.BusStationsGrid.RowHeadersVisible = false;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.BusesGrid.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.BusesGrid.RowTemplate.ReadOnly = true;
-            this.BusesGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BusesGrid.Size = new System.Drawing.Size(1582, 938);
-            this.BusesGrid.TabIndex = 15;
+            this.BusStationsGrid.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.BusStationsGrid.RowTemplate.ReadOnly = true;
+            this.BusStationsGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.BusStationsGrid.Size = new System.Drawing.Size(1596, 874);
+            this.BusStationsGrid.TabIndex = 15;
             // 
             // DriversTab
             // 
             this.DriversTab.Controls.Add(this.DriversGrid);
             this.DriversTab.Location = new System.Drawing.Point(4, 4);
             this.DriversTab.Name = "DriversTab";
-            this.DriversTab.Size = new System.Drawing.Size(1588, 944);
+            this.DriversTab.Size = new System.Drawing.Size(1596, 874);
             this.DriversTab.TabIndex = 2;
             this.DriversTab.Text = "Drivers";
             this.DriversTab.UseVisualStyleBackColor = true;
@@ -514,37 +656,38 @@
             this.DriversGrid.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.DriversGrid.RowTemplate.ReadOnly = true;
             this.DriversGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DriversGrid.Size = new System.Drawing.Size(1588, 944);
+            this.DriversGrid.Size = new System.Drawing.Size(1596, 874);
             this.DriversGrid.TabIndex = 15;
             // 
-            // PassangersTab
+            // BusesTab
             // 
-            this.PassangersTab.Controls.Add(this.PassangersGrid);
-            this.PassangersTab.Location = new System.Drawing.Point(4, 4);
-            this.PassangersTab.Name = "PassangersTab";
-            this.PassangersTab.Size = new System.Drawing.Size(1588, 944);
-            this.PassangersTab.TabIndex = 3;
-            this.PassangersTab.Text = "Passangers";
-            this.PassangersTab.UseVisualStyleBackColor = true;
+            this.BusesTab.Controls.Add(this.BusesGrid);
+            this.BusesTab.Location = new System.Drawing.Point(4, 4);
+            this.BusesTab.Name = "BusesTab";
+            this.BusesTab.Padding = new System.Windows.Forms.Padding(3);
+            this.BusesTab.Size = new System.Drawing.Size(1596, 874);
+            this.BusesTab.TabIndex = 1;
+            this.BusesTab.Text = "Buses";
+            this.BusesTab.UseVisualStyleBackColor = true;
             // 
-            // PassangersGrid
+            // BusesGrid
             // 
-            this.PassangersGrid.AllowUserToAddRows = false;
-            this.PassangersGrid.AllowUserToDeleteRows = false;
-            this.PassangersGrid.AllowUserToResizeColumns = false;
-            this.PassangersGrid.AllowUserToResizeRows = false;
+            this.BusesGrid.AllowUserToAddRows = false;
+            this.BusesGrid.AllowUserToDeleteRows = false;
+            this.BusesGrid.AllowUserToResizeColumns = false;
+            this.BusesGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle16.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.PassangersGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.PassangersGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.PassangersGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.PassangersGrid.BackgroundColor = System.Drawing.Color.White;
-            this.PassangersGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PassangersGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.PassangersGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.BusesGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.BusesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BusesGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.BusesGrid.BackgroundColor = System.Drawing.Color.White;
+            this.BusesGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BusesGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.BusesGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle17.BackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle17.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -552,24 +695,24 @@
             dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PassangersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.PassangersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PassangersGrid.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BusesGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.BusesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BusesGrid.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle18.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.PassangersGrid.DefaultCellStyle = dataGridViewCellStyle18;
-            this.PassangersGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PassangersGrid.EnableHeadersVisualStyles = false;
-            this.PassangersGrid.GridColor = System.Drawing.Color.Black;
-            this.PassangersGrid.Location = new System.Drawing.Point(0, 0);
-            this.PassangersGrid.Name = "PassangersGrid";
-            this.PassangersGrid.ReadOnly = true;
-            this.PassangersGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.BusesGrid.DefaultCellStyle = dataGridViewCellStyle18;
+            this.BusesGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BusesGrid.EnableHeadersVisualStyles = false;
+            this.BusesGrid.GridColor = System.Drawing.Color.Black;
+            this.BusesGrid.Location = new System.Drawing.Point(3, 3);
+            this.BusesGrid.Name = "BusesGrid";
+            this.BusesGrid.ReadOnly = true;
+            this.BusesGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle19.BackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle19.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -577,47 +720,48 @@
             dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.PassangersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.PassangersGrid.RowHeadersVisible = false;
+            this.BusesGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.BusesGrid.RowHeadersVisible = false;
             dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle20.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.PassangersGrid.RowsDefaultCellStyle = dataGridViewCellStyle20;
-            this.PassangersGrid.RowTemplate.ReadOnly = true;
-            this.PassangersGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PassangersGrid.Size = new System.Drawing.Size(1588, 944);
-            this.PassangersGrid.TabIndex = 15;
+            this.BusesGrid.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.BusesGrid.RowTemplate.ReadOnly = true;
+            this.BusesGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.BusesGrid.Size = new System.Drawing.Size(1590, 868);
+            this.BusesGrid.TabIndex = 15;
             // 
-            // BusStationsTab
+            // RoutesTab
             // 
-            this.BusStationsTab.Controls.Add(this.BusStationsGrid);
-            this.BusStationsTab.Location = new System.Drawing.Point(4, 4);
-            this.BusStationsTab.Name = "BusStationsTab";
-            this.BusStationsTab.Size = new System.Drawing.Size(1588, 944);
-            this.BusStationsTab.TabIndex = 4;
-            this.BusStationsTab.Text = "BusStations";
-            this.BusStationsTab.UseVisualStyleBackColor = true;
+            this.RoutesTab.Controls.Add(this.RoutesGrid);
+            this.RoutesTab.Location = new System.Drawing.Point(4, 4);
+            this.RoutesTab.Name = "RoutesTab";
+            this.RoutesTab.Padding = new System.Windows.Forms.Padding(3);
+            this.RoutesTab.Size = new System.Drawing.Size(1596, 944);
+            this.RoutesTab.TabIndex = 0;
+            this.RoutesTab.Text = "Routes";
+            this.RoutesTab.UseVisualStyleBackColor = true;
             // 
-            // BusStationsGrid
+            // RoutesGrid
             // 
-            this.BusStationsGrid.AllowUserToAddRows = false;
-            this.BusStationsGrid.AllowUserToDeleteRows = false;
-            this.BusStationsGrid.AllowUserToResizeColumns = false;
-            this.BusStationsGrid.AllowUserToResizeRows = false;
+            this.RoutesGrid.AllowUserToAddRows = false;
+            this.RoutesGrid.AllowUserToDeleteRows = false;
+            this.RoutesGrid.AllowUserToResizeColumns = false;
+            this.RoutesGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle21.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            this.BusStationsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
-            this.BusStationsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.BusStationsGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.BusStationsGrid.BackgroundColor = System.Drawing.Color.White;
-            this.BusStationsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.BusStationsGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.BusStationsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.RoutesGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.RoutesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.RoutesGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.RoutesGrid.BackgroundColor = System.Drawing.Color.White;
+            this.RoutesGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RoutesGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.RoutesGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle22.BackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle22.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -625,24 +769,24 @@
             dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BusStationsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
-            this.BusStationsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BusStationsGrid.Cursor = System.Windows.Forms.Cursors.Default;
+            this.RoutesGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            this.RoutesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RoutesGrid.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle23.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BusStationsGrid.DefaultCellStyle = dataGridViewCellStyle23;
-            this.BusStationsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BusStationsGrid.EnableHeadersVisualStyles = false;
-            this.BusStationsGrid.GridColor = System.Drawing.Color.Black;
-            this.BusStationsGrid.Location = new System.Drawing.Point(0, 0);
-            this.BusStationsGrid.Name = "BusStationsGrid";
-            this.BusStationsGrid.ReadOnly = true;
-            this.BusStationsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.RoutesGrid.DefaultCellStyle = dataGridViewCellStyle23;
+            this.RoutesGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RoutesGrid.EnableHeadersVisualStyles = false;
+            this.RoutesGrid.GridColor = System.Drawing.Color.Black;
+            this.RoutesGrid.Location = new System.Drawing.Point(3, 3);
+            this.RoutesGrid.Name = "RoutesGrid";
+            this.RoutesGrid.ReadOnly = true;
+            this.RoutesGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle24.BackColor = System.Drawing.Color.RoyalBlue;
             dataGridViewCellStyle24.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -650,230 +794,35 @@
             dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BusStationsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
-            this.BusStationsGrid.RowHeadersVisible = false;
+            this.RoutesGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            this.RoutesGrid.RowHeadersVisible = false;
             dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle25.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
-            this.BusStationsGrid.RowsDefaultCellStyle = dataGridViewCellStyle25;
-            this.BusStationsGrid.RowTemplate.ReadOnly = true;
-            this.BusStationsGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BusStationsGrid.Size = new System.Drawing.Size(1588, 944);
-            this.BusStationsGrid.TabIndex = 15;
+            this.RoutesGrid.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            this.RoutesGrid.RowTemplate.ReadOnly = true;
+            this.RoutesGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.RoutesGrid.Size = new System.Drawing.Size(1590, 938);
+            this.RoutesGrid.TabIndex = 16;
             // 
-            // TripsButton
+            // TabControl
             // 
-            this.TripsButton.BackColor = System.Drawing.Color.RoyalBlue;
-            this.TripsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.TripsButton.FlatAppearance.BorderSize = 0;
-            this.TripsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TripsButton.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TripsButton.ForeColor = System.Drawing.Color.White;
-            this.TripsButton.Location = new System.Drawing.Point(74, 494);
-            this.TripsButton.Margin = new System.Windows.Forms.Padding(0);
-            this.TripsButton.Name = "TripsButton";
-            this.TripsButton.Size = new System.Drawing.Size(222, 57);
-            this.TripsButton.TabIndex = 22;
-            this.TripsButton.Text = "Рейсы";
-            this.TripsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.TripsButton.UseVisualStyleBackColor = false;
-            this.TripsButton.Click += new System.EventHandler(this.TripsButton_Click);
-            this.TripsButton.MouseEnter += new System.EventHandler(this.TripsButton_MouseEnter);
-            this.TripsButton.MouseLeave += new System.EventHandler(this.TripsButton_MouseLeave);
-            // 
-            // TripsTab
-            // 
-            this.TripsTab.Controls.Add(this.TripsGrid);
-            this.TripsTab.Location = new System.Drawing.Point(4, 4);
-            this.TripsTab.Name = "TripsTab";
-            this.TripsTab.Size = new System.Drawing.Size(1588, 944);
-            this.TripsTab.TabIndex = 5;
-            this.TripsTab.Text = "Trips";
-            this.TripsTab.UseVisualStyleBackColor = true;
-            // 
-            // TripsGrid
-            // 
-            this.TripsGrid.AllowUserToAddRows = false;
-            this.TripsGrid.AllowUserToDeleteRows = false;
-            this.TripsGrid.AllowUserToResizeColumns = false;
-            this.TripsGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Black;
-            this.TripsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
-            this.TripsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.TripsGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.TripsGrid.BackgroundColor = System.Drawing.Color.White;
-            this.TripsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TripsGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.TripsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TripsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            this.TripsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TripsGrid.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Franklin Gothic Book", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TripsGrid.DefaultCellStyle = dataGridViewCellStyle28;
-            this.TripsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TripsGrid.EnableHeadersVisualStyles = false;
-            this.TripsGrid.GridColor = System.Drawing.Color.Black;
-            this.TripsGrid.Location = new System.Drawing.Point(0, 0);
-            this.TripsGrid.Name = "TripsGrid";
-            this.TripsGrid.ReadOnly = true;
-            this.TripsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TripsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
-            this.TripsGrid.RowHeadersVisible = false;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Franklin Gothic Book", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.Black;
-            this.TripsGrid.RowsDefaultCellStyle = dataGridViewCellStyle30;
-            this.TripsGrid.RowTemplate.ReadOnly = true;
-            this.TripsGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TripsGrid.Size = new System.Drawing.Size(1588, 944);
-            this.TripsGrid.TabIndex = 16;
-            // 
-            // UpdateButton
-            // 
-            this.UpdateButton.BackColor = System.Drawing.Color.RoyalBlue;
-            this.UpdateButton.BackgroundImage = global::CBP.Properties.Resources.update_icon;
-            this.UpdateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.UpdateButton.FlatAppearance.BorderSize = 0;
-            this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateButton.Location = new System.Drawing.Point(362, 23);
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(31, 36);
-            this.UpdateButton.TabIndex = 22;
-            this.UpdateButton.UseVisualStyleBackColor = false;
-            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
-            // 
-            // SearchButton
-            // 
-            this.SearchButton.BackColor = System.Drawing.Color.RoyalBlue;
-            this.SearchButton.BackgroundImage = global::CBP.Properties.Resources.search_icon;
-            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchButton.Location = new System.Drawing.Point(316, 23);
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(31, 36);
-            this.SearchButton.TabIndex = 21;
-            this.SearchButton.UseVisualStyleBackColor = false;
-            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
-            // 
-            // TripIcon
-            // 
-            this.TripIcon.BackColor = System.Drawing.Color.RoyalBlue;
-            this.TripIcon.BackgroundImage = global::CBP.Properties.Resources.trips_icon;
-            this.TripIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.TripIcon.FlatAppearance.BorderSize = 0;
-            this.TripIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TripIcon.Location = new System.Drawing.Point(92, 497);
-            this.TripIcon.Name = "TripIcon";
-            this.TripIcon.Size = new System.Drawing.Size(48, 47);
-            this.TripIcon.TabIndex = 23;
-            this.TripIcon.UseVisualStyleBackColor = false;
-            this.TripIcon.Click += new System.EventHandler(this.TripIcon_Click);
-            this.TripIcon.MouseEnter += new System.EventHandler(this.TripIcon_MouseEnter);
-            this.TripIcon.MouseLeave += new System.EventHandler(this.TripIcon_MouseLeave);
-            // 
-            // StationIcon
-            // 
-            this.StationIcon.BackColor = System.Drawing.Color.RoyalBlue;
-            this.StationIcon.BackgroundImage = global::CBP.Properties.Resources.busstation_icon;
-            this.StationIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.StationIcon.FlatAppearance.BorderSize = 0;
-            this.StationIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StationIcon.Location = new System.Drawing.Point(92, 444);
-            this.StationIcon.Name = "StationIcon";
-            this.StationIcon.Size = new System.Drawing.Size(48, 47);
-            this.StationIcon.TabIndex = 21;
-            this.StationIcon.UseVisualStyleBackColor = false;
-            this.StationIcon.Click += new System.EventHandler(this.StationIcon_Click);
-            this.StationIcon.MouseEnter += new System.EventHandler(this.StationIcon_MouseEnter);
-            this.StationIcon.MouseLeave += new System.EventHandler(this.StationIcon_MouseLeave);
-            // 
-            // RouteIcon
-            // 
-            this.RouteIcon.BackColor = System.Drawing.Color.RoyalBlue;
-            this.RouteIcon.BackgroundImage = global::CBP.Properties.Resources.route_icon;
-            this.RouteIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.RouteIcon.FlatAppearance.BorderSize = 0;
-            this.RouteIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RouteIcon.Location = new System.Drawing.Point(91, 274);
-            this.RouteIcon.Name = "RouteIcon";
-            this.RouteIcon.Size = new System.Drawing.Size(42, 45);
-            this.RouteIcon.TabIndex = 17;
-            this.RouteIcon.UseVisualStyleBackColor = false;
-            this.RouteIcon.Click += new System.EventHandler(this.RouteIcon_Click);
-            this.RouteIcon.MouseEnter += new System.EventHandler(this.RouteIcon_MouseEnter);
-            this.RouteIcon.MouseLeave += new System.EventHandler(this.RouteIcon_MouseLeave);
-            // 
-            // DriverIcon
-            // 
-            this.DriverIcon.BackColor = System.Drawing.Color.RoyalBlue;
-            this.DriverIcon.BackgroundImage = global::CBP.Properties.Resources.driver_icon;
-            this.DriverIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DriverIcon.FlatAppearance.BorderSize = 0;
-            this.DriverIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DriverIcon.Location = new System.Drawing.Point(91, 388);
-            this.DriverIcon.Name = "DriverIcon";
-            this.DriverIcon.Size = new System.Drawing.Size(42, 45);
-            this.DriverIcon.TabIndex = 19;
-            this.DriverIcon.UseVisualStyleBackColor = false;
-            this.DriverIcon.Click += new System.EventHandler(this.DriverIcon_Click);
-            this.DriverIcon.MouseEnter += new System.EventHandler(this.DriverIcon_MouseEnter);
-            this.DriverIcon.MouseLeave += new System.EventHandler(this.DriverIcon_MouseLeave);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.pictureBox2.Image = global::CBP.Properties.Resources.bus1;
-            this.pictureBox2.Location = new System.Drawing.Point(12, -35);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(275, 253);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // BusIcon
-            // 
-            this.BusIcon.BackColor = System.Drawing.Color.RoyalBlue;
-            this.BusIcon.BackgroundImage = global::CBP.Properties.Resources.bus_icon;
-            this.BusIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BusIcon.FlatAppearance.BorderSize = 0;
-            this.BusIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BusIcon.Location = new System.Drawing.Point(91, 331);
-            this.BusIcon.Name = "BusIcon";
-            this.BusIcon.Size = new System.Drawing.Size(42, 45);
-            this.BusIcon.TabIndex = 18;
-            this.BusIcon.UseVisualStyleBackColor = false;
-            this.BusIcon.Click += new System.EventHandler(this.BusIcon_Click);
-            this.BusIcon.MouseEnter += new System.EventHandler(this.BusIcon_MouseEnter);
-            this.BusIcon.MouseLeave += new System.EventHandler(this.BusIcon_MouseLeave);
+            this.TabControl.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.TabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TabControl.Controls.Add(this.RoutesTab);
+            this.TabControl.Controls.Add(this.BusesTab);
+            this.TabControl.Controls.Add(this.DriversTab);
+            this.TabControl.Controls.Add(this.BusStationsTab);
+            this.TabControl.Controls.Add(this.TripsTab);
+            this.TabControl.Location = new System.Drawing.Point(300, 89);
+            this.TabControl.Name = "TabControl";
+            this.TabControl.SelectedIndex = 0;
+            this.TabControl.Size = new System.Drawing.Size(1604, 970);
+            this.TabControl.TabIndex = 18;
             // 
             // MainForm
             // 
@@ -894,22 +843,20 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RoutesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.TabControl.ResumeLayout(false);
-            this.RoutesTab.ResumeLayout(false);
-            this.BusesTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BusesGrid)).EndInit();
-            this.DriversTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DriversGrid)).EndInit();
-            this.PassangersTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PassangersGrid)).EndInit();
-            this.BusStationsTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BusStationsGrid)).EndInit();
             this.TripsTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TripsGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.BusStationsTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BusStationsGrid)).EndInit();
+            this.DriversTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DriversGrid)).EndInit();
+            this.BusesTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BusesGrid)).EndInit();
+            this.RoutesTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RoutesGrid)).EndInit();
+            this.TabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -922,30 +869,30 @@
         private System.Windows.Forms.Button StationsButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView RoutesGrid;
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TabControl TabControl;
-        private System.Windows.Forms.TabPage RoutesTab;
-        private System.Windows.Forms.TabPage BusesTab;
-        private System.Windows.Forms.TabPage DriversTab;
-        private System.Windows.Forms.TabPage PassangersTab;
-        private System.Windows.Forms.TabPage BusStationsTab;
         private System.Windows.Forms.Button RouteIcon;
         private System.Windows.Forms.Button StationIcon;
         private System.Windows.Forms.Button DriverIcon;
         private System.Windows.Forms.Button BusIcon;
-        private System.Windows.Forms.DataGridView BusesGrid;
-        private System.Windows.Forms.DataGridView DriversGrid;
-        private System.Windows.Forms.DataGridView PassangersGrid;
-        private System.Windows.Forms.DataGridView BusStationsGrid;
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Button TripIcon;
         private System.Windows.Forms.Button TripsButton;
+        private System.Windows.Forms.ComboBox comboBoxValue;
+        private System.Windows.Forms.ComboBox comboBoxFilter;
         private System.Windows.Forms.TabPage TripsTab;
         private System.Windows.Forms.DataGridView TripsGrid;
+        private System.Windows.Forms.TabPage BusStationsTab;
+        private System.Windows.Forms.DataGridView BusStationsGrid;
+        private System.Windows.Forms.TabPage DriversTab;
+        private System.Windows.Forms.DataGridView DriversGrid;
+        private System.Windows.Forms.TabPage BusesTab;
+        private System.Windows.Forms.DataGridView BusesGrid;
+        private System.Windows.Forms.TabPage RoutesTab;
+        private System.Windows.Forms.DataGridView RoutesGrid;
+        private System.Windows.Forms.TabControl TabControl;
     }
 }

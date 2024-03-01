@@ -55,7 +55,7 @@ namespace CBP
 
         private void AboutApp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Приложение разработано учащимся учебной группы 52ТП Симаченко Антоном МГКЦТ 2023");
+            MessageBox.Show("Приложение разработано учащимся учебной группы 52ТП Симаченко Антоном МГКЦТ 2024");
         }
 
         private void Exit_Click(object sender, EventArgs e)

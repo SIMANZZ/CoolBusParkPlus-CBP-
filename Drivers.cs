@@ -59,9 +59,11 @@ namespace CBP
         {
             if(int.TryParse(DriverExpirienceBox.Text,out var parsedNumber))
             {
-                CMD.CommandText = "INSERT INTO Drivers (ФИО,[Закреплённый автобус],[Стаж вождения]) VALUES (@LFP, @FixedBus, @DriverExpirience)";
+                CMD.CommandText = "INSERT INTO Drivers (ФИО,[Закреплённый автобус],[Стаж вождения]) " +
+                    "VALUES (@LFP, (SELECT ID FROM Buses WHERE [Индивидуальный номер] = @IndividualNumber), " +
+                    "@DriverExpirience)";
                 CMD.Parameters.AddWithValue("@LFP", LFPBox.Text);
-                CMD.Parameters.AddWithValue("@FixedBus", FixedBuscomboBox.Text.ToString());
+                CMD.Parameters.AddWithValue("@IndividualNumber", FixedBuscomboBox.Text.ToString());
                 CMD.Parameters.AddWithValue("@DriverExpirience", DriverExpirienceBox.Text);
                 DriversTable.Clear();
                 DriversTable.Load(CMD.ExecuteReader());

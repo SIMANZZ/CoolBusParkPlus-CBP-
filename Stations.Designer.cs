@@ -32,9 +32,9 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.NameBox = new System.Windows.Forms.TextBox();
-            this.RoutesBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.RouteComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // ExitButton
@@ -80,27 +80,15 @@
             this.NameBox.Enter += new System.EventHandler(this.NameBox_Enter);
             this.NameBox.Leave += new System.EventHandler(this.NameBox_Leave);
             // 
-            // RoutesBox
-            // 
-            this.RoutesBox.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RoutesBox.ForeColor = System.Drawing.Color.Silver;
-            this.RoutesBox.Location = new System.Drawing.Point(152, 64);
-            this.RoutesBox.Name = "RoutesBox";
-            this.RoutesBox.Size = new System.Drawing.Size(306, 35);
-            this.RoutesBox.TabIndex = 49;
-            this.RoutesBox.Text = "107,104,105";
-            this.RoutesBox.Enter += new System.EventHandler(this.RoutesBox_Enter);
-            this.RoutesBox.Leave += new System.EventHandler(this.RoutesBox_Leave);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 71);
+            this.label4.Location = new System.Drawing.Point(24, 71);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 24);
+            this.label4.Size = new System.Drawing.Size(106, 24);
             this.label4.TabIndex = 54;
-            this.label4.Text = "Маршруты*";
+            this.label4.Text = "Маршрут*";
             // 
             // label1
             // 
@@ -112,16 +100,28 @@
             this.label1.TabIndex = 52;
             this.label1.Text = "Название*";
             // 
+            // RouteComboBox
+            // 
+            this.RouteComboBox.BackColor = System.Drawing.Color.White;
+            this.RouteComboBox.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RouteComboBox.ForeColor = System.Drawing.Color.Black;
+            this.RouteComboBox.FormattingEnabled = true;
+            this.RouteComboBox.Location = new System.Drawing.Point(152, 64);
+            this.RouteComboBox.Name = "RouteComboBox";
+            this.RouteComboBox.Size = new System.Drawing.Size(306, 38);
+            this.RouteComboBox.TabIndex = 55;
+            this.RouteComboBox.Text = "номер";
+            // 
             // Stations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(473, 170);
+            this.Controls.Add(this.RouteComboBox);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.NameBox);
-            this.Controls.Add(this.RoutesBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -142,8 +142,8 @@
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.TextBox NameBox;
-        private System.Windows.Forms.TextBox RoutesBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox RouteComboBox;
     }
 }

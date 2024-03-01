@@ -70,7 +70,7 @@
             this.AboutApp.Location = new System.Drawing.Point(41, 140);
             this.AboutApp.Name = "AboutApp";
             this.AboutApp.Size = new System.Drawing.Size(224, 65);
-            this.AboutApp.TabIndex = 0;
+            this.AboutApp.TabIndex = 1;
             this.AboutApp.Text = "О приложении";
             this.toolTip1.SetToolTip(this.AboutApp, "Просмотреть информацию о приложении");
             this.AboutApp.UseVisualStyleBackColor = false;
@@ -85,7 +85,7 @@
             this.Exit.Location = new System.Drawing.Point(41, 251);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(224, 65);
-            this.Exit.TabIndex = 0;
+            this.Exit.TabIndex = 2;
             this.Exit.Text = "Выйти";
             this.toolTip1.SetToolTip(this.Exit, "Выйти из приложения");
             this.Exit.UseVisualStyleBackColor = false;
@@ -148,7 +148,7 @@
             this.графикToolStripMenuItem.Text = "График";
             this.графикToolStripMenuItem.Click += new System.EventHandler(this.графикToolStripMenuItem_Click);
             // 
-            // Form1
+            // EnterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,7 +164,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "EnterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dream Bus";
             this.Load += new System.EventHandler(this.Form1_Load);

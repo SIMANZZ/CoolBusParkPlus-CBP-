@@ -16,7 +16,7 @@ namespace CBP
 
         SQLiteConnection DB;
         SQLiteCommand CMD;
-        DataTable StationsTable;
+        DataTable StationsTable, RoutesTable;
         public Stations()
         {
             InitializeComponent();
@@ -35,13 +35,19 @@ namespace CBP
 
             DB.Open();
 
-            StationsTable = new DataTable();
+            StationsTable = new DataTable(); RoutesTable = new DataTable();
+
+            CMD.CommandText = "SELECT [Номер маршрута] FROM Routes";
+            RouteComboBox.DataSource = RoutesTable;
+            RoutesTable.Clear();
+            RoutesTable.Load(CMD.ExecuteReader());
+            RouteComboBox.DisplayMember = "Номер маршрута";
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
             string TempString = "";
-            for(int i = 0; i<NameBox.Text.Length; i++)
+            for(int i = 0; i < NameBox.Text.Length; i++)
             {
                 if(i == 0)
                 {
@@ -52,9 +58,15 @@ namespace CBP
                     TempString += NameBox.Text[i].ToString();
                 }
             }
-            CMD.CommandText = "INSERT INTO BusStations (Название, Маршруты) VALUES (@Name, @Routes)";
+            CMD.CommandText = "INSERT INTO StationsNames (Название) VALUES (@Name)";
             CMD.Parameters.AddWithValue("@Name", TempString);
-            CMD.Parameters.AddWithValue("@Routes", RoutesBox.Text);
+            StationsTable.Clear();
+            StationsTable.Load(CMD.ExecuteReader());
+            CMD.CommandText = "INSERT INTO BusStations (Название, [Номер маршрута]) " +
+                "VALUES ((SELECT ID FROM StationsNames WHERE Название = @Name), " +
+                "(SELECT ID FROM Routes WHERE [Номер маршрута] = @RouteNumber))";
+            CMD.Parameters.AddWithValue("@Name", TempString);
+            CMD.Parameters.AddWithValue("@RouteNumber", RouteComboBox.Text);
             StationsTable.Clear();
             StationsTable.Load(CMD.ExecuteReader());
             MessageBox.Show("Новая остановка успешно добавлена");
@@ -64,24 +76,6 @@ namespace CBP
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void RoutesBox_Enter(object sender, EventArgs e)
-        {
-            if (RoutesBox.Text == "107,104,105")
-            {
-                RoutesBox.Text = "";
-                RoutesBox.ForeColor = Color.Black;
-            }
-        }
-
-        private void RoutesBox_Leave(object sender, EventArgs e)
-        {
-            if (RoutesBox.Text == "")
-            {
-                RoutesBox.Text = "107,104,105";
-                RoutesBox.ForeColor = Color.Silver;
-            }
         }
 
         private void NameBox_Enter(object sender, EventArgs e)

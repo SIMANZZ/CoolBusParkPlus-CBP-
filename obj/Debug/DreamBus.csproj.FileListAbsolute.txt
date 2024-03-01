@@ -1,6 +1,3 @@
-D:\Lessons\CourseProject\bin\Debug\CBP.exe.config
-D:\Lessons\CourseProject\bin\Debug\CBP.exe
-D:\Lessons\CourseProject\bin\Debug\CBP.pdb
 D:\Lessons\CourseProject\bin\Debug\EntityFramework.dll
 D:\Lessons\CourseProject\bin\Debug\EntityFramework.SqlServer.dll
 D:\Lessons\CourseProject\bin\Debug\System.Data.SQLite.dll
@@ -30,5 +27,8 @@ D:\Lessons\CourseProject\obj\Debug\CBP.UserForm.resources
 D:\Lessons\CourseProject\obj\Debug\DreamBus.csproj.GenerateResource.cache
 D:\Lessons\CourseProject\obj\Debug\DreamBus.csproj.CoreCompileInputs.cache
 D:\Lessons\CourseProject\obj\Debug\DreamBus.csproj.CopyComplete
-D:\Lessons\CourseProject\obj\Debug\CBP.exe
-D:\Lessons\CourseProject\obj\Debug\CBP.pdb
+D:\Lessons\CourseProject\bin\Debug\DreamBus.exe.config
+D:\Lessons\CourseProject\bin\Debug\DreamBus.exe
+D:\Lessons\CourseProject\bin\Debug\DreamBus.pdb
+D:\Lessons\CourseProject\obj\Debug\DreamBus.exe
+D:\Lessons\CourseProject\obj\Debug\DreamBus.pdb

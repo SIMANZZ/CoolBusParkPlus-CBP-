@@ -18,7 +18,7 @@ namespace CBP
     {
         SQLiteConnection DB;
         SQLiteCommand CMD;
-        DataTable RoutesTable;
+        DataTable RoutesTable, BusStationsStartTable, BusStationsEndTable;
         public Routes()
         {
             InitializeComponent();
@@ -36,7 +36,20 @@ namespace CBP
 
             DB.Open();
 
-            RoutesTable= new DataTable();
+            RoutesTable = new DataTable();
+
+            BusStationsStartTable = new DataTable(); BusStationsEndTable = new DataTable();
+
+            CMD.CommandText = $"SELECT Название FROM StationsNames";
+            BusStationsStartComboBox.DataSource = BusStationsStartTable;
+            BusStationsStartTable.Clear();
+            BusStationsStartTable.Load(CMD.ExecuteReader());
+            BusStationsStartComboBox.DisplayMember = "Название";
+
+            BusStationsEndComboBox.DataSource = BusStationsEndTable;
+            BusStationsEndTable.Clear();
+            BusStationsEndTable.Load(CMD.ExecuteReader());
+            BusStationsEndComboBox.DisplayMember = "Название";
         }
         private void NumberOfRouteBox_Enter(object sender, EventArgs e)
         {
@@ -73,43 +86,7 @@ namespace CBP
                 NumberOfStationsBox.ForeColor = Color.Silver;
             }
         }
-
-        private void StartStationBox_Enter(object sender, EventArgs e)
-        {
-            if (StartStationBox.Text == "начальная остановка")
-            {
-                StartStationBox.Text = "";
-                StartStationBox.ForeColor = Color.Black;
-            }
-        }
-
-        private void StartStationBox_Leave(object sender, EventArgs e)
-        {
-            if (StartStationBox.Text == "")
-            {
-                StartStationBox.Text = "начальная остановка";
-                StartStationBox.ForeColor = Color.Silver;
-            }
-        }
-
-        private void EndStationBox_Enter(object sender, EventArgs e)
-        {
-            if (EndStationBox.Text == "конечная остановка")
-            {
-                EndStationBox.Text = "";
-                EndStationBox.ForeColor = Color.Black;
-            }
-        }
-
-        private void EndStationBox_Leave(object sender, EventArgs e)
-        {
-            if (EndStationBox.Text == "")
-            {
-                EndStationBox.Text = "конечная остановка";
-                EndStationBox.ForeColor = Color.Silver;
-            }
-        }
-
+        
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -117,17 +94,20 @@ namespace CBP
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if (NumberOfRouteBox.Text == "номер маршрута" || NumberOfStationsBox.Text == "количество остановок" || StartStationBox.Text == "начальная остановка" || EndStationBox.Text == "конечная остановка")
+            if (NumberOfRouteBox.Text == "номер маршрута" || NumberOfStationsBox.Text == "количество остановок")
             {
                 MessageBox.Show("Поля не могут быть пустыми");
             }
-            else if(int.TryParse(NumberOfStationsBox.Text,out var parsedNumber))
-            {     
-                CMD.CommandText = "INSERT INTO Routes ([Номер маршрута],[Количество остановок],[Начальная остановка],[Конечная остановка]) VALUES (@NumberOfRoute, @NumberOfStations, @StartStation,@EndStation)";
+            else if (int.TryParse(NumberOfStationsBox.Text, out var parsedNumber))
+            {
+                CMD.CommandText = "INSERT INTO Routes ([Номер маршрута], [Количество остановок], [Начальная остановка], [Конечная остановка]) " +
+                  "VALUES (@NumberOfRoute, @NumberOfStations, " +
+                  "(SELECT ID FROM StationsNames WHERE Название = @StartStation), " +
+                  "(SELECT ID FROM StationsNames WHERE Название = @EndStation))";
                 CMD.Parameters.AddWithValue("@NumberOfRoute", NumberOfRouteBox.Text);
                 CMD.Parameters.AddWithValue("@NumberOfStations", int.Parse(NumberOfStationsBox.Text));
-                CMD.Parameters.AddWithValue("@StartStation", StartStationBox.Text);
-                CMD.Parameters.AddWithValue("@EndStation", EndStationBox.Text);
+                CMD.Parameters.AddWithValue("@StartStation", BusStationsStartComboBox.Text);
+                CMD.Parameters.AddWithValue("@EndStation", BusStationsEndComboBox.Text);
                 RoutesTable.Clear();
                 RoutesTable.Load(CMD.ExecuteReader());
                 MessageBox.Show("Новый маршрут успешно добавлен");
@@ -138,58 +118,6 @@ namespace CBP
                 MessageBox.Show("Количество остановок должно быть числом");
             }
         }
-
-        //Checked for the number
-        //public static bool isValidTime(String str)
-        //{
-
-        //    // Regex to check valid LEI Code
-        //    var regex = new Regex("^(?:[01]?[0-9]|2[0-3]):[0-5]?[0-9](?::[0-5]?[0-9])?$");
-
-        //    // If the str
-        //    // is empty return false
-        //    if (str == null)
-        //    {
-        //        return false;
-        //    }
-
-        //    // Pattern class contains matcher()
-        //    // method to find matching between
-        //    // given LEI Code using regex.
-        //    var m = regex.Match(str);
-
-        //    // Return if the MICR Code
-        //    // matched the ReGex
-        //    return m.Success;
-        //}
-
-//        if (DateTime.TryParse(DateBox.Text, out dDate))
-//                {
-//DateTime dDate;
-//int year;
-//                    year = int.Parse(String.Format("{0:yyyy}", dDate));
-//                    if(year< 2023)
-//                    {
-//                        MessageBox.Show("Год не может быть раньше 2023");
-//                    }
-//                    else
-//                    {
-
-//                                CMD.CommandText = "INSERT INTO Routes (Название,[Время отправления],[Время прибытия],Дата,Стоимость) VALUES (@Name, @DepartureTime, @ArrivalTime,@Date, @Cost)";
-//                                CMD.Parameters.AddWithValue("@Name", NameBox.Text);
-//                                CMD.Parameters.AddWithValue("@DepartureTime", DepartureTimeBox.Text);
-//                                CMD.Parameters.AddWithValue("@ArrivalTime", ArrivalTimeBox.Text);
-//                                CMD.Parameters.AddWithValue("@Date", String.Format("{0:d.MM.yyyy}", dDate));
-//                                RoutesTable.Clear();
-//                                RoutesTable.Load(CMD.ExecuteReader());
-//                                MessageBox.Show("Новый маршрут успешно добавлен");
-//                                this.Close();
-//    }
-//}
-//                else
-//{
-//    MessageBox.Show("Неправельный формат даты");
-//}
 
         private void Routes_FormClosing(object sender, FormClosingEventArgs e)
         {
